@@ -6,7 +6,7 @@ class Order:
         self.quantity = quantity
         self.size = size
         self.type = type
-        self.price = price
+        self.price = float(price[1:])
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
