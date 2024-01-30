@@ -21,7 +21,7 @@ def start(order):
 
 def payment(total):
     while True:
-        payment_type = input("Cash or credit? ")
+        payment_type = input("Cash, Credit, or Chuck E. Cheese Tokens? ")
         if payment_type.lower() == "cash":
             print(f"The total is ${total}.")
             cash = int(input("Enter cash received: "))
@@ -44,5 +44,5 @@ def payment(total):
             input("Press ENTER to continue")
             break
         else:
-            print("Please input cash or credit only")
+            print("Please input Cash, Credit, or Chuck E. Cheese Tokens only")
             input("Press ENTER to continue")
