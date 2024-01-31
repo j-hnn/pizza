@@ -18,6 +18,7 @@ def start(order):
     print("Total: $" + str(total))
 
     payment(total)
+    save(order, total)
 
 def payment(total):
     while True:
@@ -46,3 +47,11 @@ def payment(total):
         else:
             print("Please input Cash, Credit, or Chuck E. Cheese Tokens only")
             input("Press ENTER to continue")
+
+def save(order, total):
+    with open("pizza.dat", "a") as orders:
+        for pizza in order:
+            orders.write(f"{pizza.quantity}, {pizza.size}, {pizza.type}, {pizza.price}, ")
+            orders.write(f"{total}")
+        orders.write("\n")
+    
